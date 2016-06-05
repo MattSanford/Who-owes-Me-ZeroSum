@@ -63,7 +63,7 @@ app.controller('SampleCtrl', ['$scope', '$firebaseObject', '$firebaseArray', '$f
 
     function userExistsCallback(authData, exists) {
         if (exists) {
-            alert('user ' + authData.google.id + ' exists!');
+            alert('Welcome back ' + authData.google.displayName + '!');
         } else {
             ref.child('users').child(authData.uid).set({ //create a new user at the user/<$uid>/ path
                 google_id: authData.google.id,

@@ -33,8 +33,8 @@
 			</div>
 		<!-- End Profile -->
 		<!-- Friends -->
-			<div class="col-md-6">
-				<form action="#"  ng-if="authData.user" class="form-inline">
+			<div class="col-md-6" ng-if="authData.user">
+				<form action="#" class="form-inline">
 					<div class="form-group">
 						<label for="">Search for friends</label>
 						<input type="text" class="form-control" ng-model="search.email" placeholder="friend@email.com">
@@ -58,7 +58,7 @@
 		</div>
 		<div class="row">
 			<div class="col-md-4" ng-show="authData.user">
-				<h3 class="add-a-trans">Add A  hello Transaction</h3>
+				<h3 class="add-a-trans">Add a Transaction</h3>
 				<form>
 					<div class="form-group">
 						<label for="Recipient">Who owes you?</label>
