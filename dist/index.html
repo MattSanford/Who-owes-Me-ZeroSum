@@ -14,10 +14,10 @@
 
 		<div class="row" >
 			<div class="col-md-6">
-				<button class="btn btn-primary" ng-hide="authData.user" ng-click="authenticate.login()">Login with Google</button>			
+				<button class="btn btn-primary" ng-hide="authData.user" ng-click="login()">Login with Google</button>			
 			</div>
 			<div class="col-md-6">
-				<button class="btn btn-default" ng-click="authenticate.logout()">logout</button>
+				<button class="btn btn-default" ng-click="logout()">logout</button>
 			</div>
 			<div class="col-md-12 alert alert-danger" role="alert" ng-if="error.message"> {{error.message}}</div>
 		</div>
@@ -37,11 +37,11 @@
 				<form action="#"  ng-if="authData.user" class="form-inline">
 					<div class="form-group">
 						<label for="">Search for friends</label>
-						<input type="text" class="form-control" ng-model="friends.findNew.query" placeholder="friend@email.com">
+						<input type="text" class="form-control" ng-model="search.email" placeholder="friend@email.com">
 					</div>
-					<button class="btn btn-default" ng-click="friends.findNew.search()">Search</button>	
+					<button class="btn btn-default" ng-click="searchUser()">Search</button>	
 				</form>						
-				<button class="btn btn-primary" ng-click="friends.findCurrent()">List Friends</button>
+				<button class="btn btn-primary" ng-click="listFriends()">List Friends</button>
 			</div>
 		</div>
 		<div class="row">
@@ -51,7 +51,7 @@
 					<div class="caption">
 						<h3 class="name">{{newFriend.name}}</h3>	
 						<h5 class="email">{{newFriend.email}}</h5>
-						<button class="btn btn-primary" ng-click="friends.findNew.addFriend()">Add Friend</button>
+						<button class="btn btn-primary" ng-click="addFriend()">Add Friend</button>
 					</div>	
 				</div>			
 			</div>
