@@ -4,7 +4,7 @@
  * Description
  */
 var app = angular.module('app.Wom', ['firebase']);
-/*var ref = new Firebase('https://who-owes-me.firebaseio.com/'); //Where data is stored
+var ref = new Firebase('https://who-owes-me.firebaseio.com/'); //Where data is stored
 var usersRef = new Firebase('https://who-owes-me.firebaseio.com/users'); //Where user data is stored	
 app.controller('SampleCtrl', ['$scope', '$firebaseObject', '$firebaseArray','$firebaseAuth', function($scope, $firebaseObject, $firebaseArray, $firebaseAuth) {
     $scope.authData = {};
@@ -28,7 +28,7 @@ app.controller('SampleCtrl', ['$scope', '$firebaseObject', '$firebaseArray','$fi
         }
     });
 	
-    /*
+    
     $scope.login = function() {
             //Use google to authenticate, allow access to the user's email 
             auth.$authWithOAuthPopup("google", {
@@ -75,9 +75,9 @@ app.controller('SampleCtrl', ['$scope', '$firebaseObject', '$firebaseArray','$fi
             });
         }
     }
-    */
-//}]); 
-/*
+    
+}]); 
+
 //search for friends
 
 $scope.search = {
@@ -145,7 +145,7 @@ friendsRef.once( 'value', function(dataSnapshot) {
 				console.log(friendsList[objectIndicies[i]]);
 				jsonObj[data[i].id] = data[i].name;
 
-				/*$scope.friendsList = {
+				$scope.friendsList = {
 
 						id:  $id,
 						name: name,
@@ -158,16 +158,5 @@ friendsRef.once( 'value', function(dataSnapshot) {
 
 
 
-}
+};
 
-
-app.factory('ListFriends', ['$scope', '$firebaseArray', function($scope, $firebaseArray){
-	var getFriendsList = function(){
-		var friendsRef = usersRef.child($scope.authData.uid).child('friends');
-		var friendsList = $firebaseArray(friendsRef);
-		console.dir(friendsList);
-	}
-	return getFriendsList;
-}]);
-
-*/
